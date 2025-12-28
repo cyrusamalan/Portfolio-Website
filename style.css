@@ -1,0 +1,502 @@
+:root {
+    --bg-dark: #0a192f;      /* Deep Navy */
+    --bg-light: #112240;     /* Light Navy */
+    --accent: #64ffda;       /* Cyan/Teal Highlight */
+    --text-white: #e6f1ff;   
+    --text-gray: #8892b0;
+    --font-main: 'Inter', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-gray);
+    font-family: var(--font-main);
+    line-height: 1.6;
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: rgba(10, 25, 47, 0.95);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+    backdrop-filter: blur(10px);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--accent);
+    border: 2px solid var(--accent);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-white);
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--accent);
+}
+
+.btn-resume {
+    border: 1px solid var(--accent);
+    padding: 8px 16px;
+    border-radius: 4px;
+    color: var(--accent) !important;
+}
+
+.btn-resume:hover {
+    background: rgba(100, 255, 218, 0.1);
+}
+
+/* Sections */
+section {
+    padding: 100px 10%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Hero */
+#about {
+    padding-top: 180px;
+    min-height: 90vh;
+}
+
+.intro {
+    color: var(--accent);
+    font-family: monospace;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.name {
+    font-size: 4.5rem;
+    color: var(--text-white);
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 3.5rem;
+    color: var(--text-gray);
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.description {
+    max-width: 540px;
+    margin-bottom: 50px;
+    font-size: 1.1rem;
+}
+
+.hero-btns {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.btn-outline {
+    text-decoration: none;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    padding: 14px 28px;
+    border-radius: 4px;
+    font-family: monospace;
+    transition: 0.3s;
+}
+
+.btn-outline:hover {
+    background: rgba(100, 255, 218, 0.1);
+}
+
+.socials a {
+    font-size: 1.5rem;
+    color: var(--text-white);
+    margin-left: 20px;
+    transition: 0.3s;
+}
+
+.socials a:hover {
+    color: var(--accent);
+    transform: translateY(-3px);
+}
+
+/* Headers */
+.section-title {
+    color: var(--text-white);
+    font-size: 2rem;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.section-title span {
+    color: var(--accent);
+    font-family: monospace;
+    margin-right: 10px;
+    font-size: 1.5rem;
+}
+
+.section-title::after {
+    content: "";
+    display: block;
+    width: 300px;
+    height: 1px;
+    background: #233554;
+    margin-left: 20px;
+}
+
+/* Experience Tabs */
+.experience-container {
+    display: flex;
+    gap: 50px;
+}
+
+.tab-list {
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+    border-left: 2px solid #233554;
+}
+
+.tab-btn {
+    background: transparent;
+    border: none;
+    text-align: left;
+    padding: 15px 20px;
+    color: var(--text-gray);
+    cursor: pointer;
+    font-family: monospace;
+    transition: 0.3s;
+    border-left: 2px solid transparent;
+    margin-left: -2px;
+}
+
+.tab-btn:hover, .tab-btn.active {
+    background: #112240;
+    color: var(--accent);
+}
+
+.tab-btn.active {
+    border-left: 2px solid var(--accent);
+}
+
+.tab-content {
+    flex: 1;
+}
+
+.job-panel {
+    display: none;
+}
+
+.job-panel.active {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+.job-panel h3 {
+    color: var(--text-white);
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.company {
+    color: var(--accent);
+}
+
+.range {
+    font-family: monospace;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+    margin-top: 5px;
+}
+
+.job-panel ul {
+    list-style: none;
+}
+
+.job-panel li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.job-panel li::before {
+    content: "▹";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+}
+
+/* Projects Grid */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 15px;
+}
+
+/* Project Card (The Anchor Tag) */
+.project-card {
+    background-color: var(--bg-light);
+    padding: 2rem;
+    border-radius: 4px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    cursor: pointer;
+    
+    /* These lines make the link look like a box */
+    display: block;          
+    text-decoration: none;   
+    border: 1px solid transparent; 
+    height: 100%;            
+}
+
+/* Card Hover Effect */
+.project-card:hover {
+    transform: translateY(-7px);
+    border-color: var(--accent); /* Light up border */
+}
+
+/* Card Header Layout */
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+/* Folder Icon */
+.card-header .fa-folder {
+    color: var(--accent);
+    font-size: 40px;
+}
+
+/* GitHub Icon */
+.card-links i {
+    color: var(--text-white);
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+/* Make GitHub icon glow when hovering the whole card */
+.project-card:hover .card-links i {
+    color: var(--accent);
+}
+
+/* Card Title */
+.project-card h3 {
+    color: var(--text-white);
+    margin-bottom: 10px;
+    transition: color 0.3s;
+}
+
+/* Make Title glow when hovering the whole card */
+.project-card:hover h3 {
+    color: var(--accent);
+}
+
+/* Card Description */
+.project-card p {
+    color: var(--text-gray);
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+/* Tech Stack Tags */
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-family: monospace;
+    font-size: 0.8rem;
+    color: var(--text-gray);
+}
+
+/* Education */
+.edu-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.edu-item {
+    background: var(--bg-light);
+    padding: 20px;
+    border-radius: 4px;
+}
+
+.edu-item h3 {
+    color: var(--text-white);
+}
+
+.edu-item .school {
+    color: var(--accent);
+}
+
+.skills-list ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    list-style: none;
+    margin-top: 20px;
+}
+
+.skills-list li::before {
+    content: "▹";
+    color: var(--accent);
+    margin-right: 10px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    font-family: monospace;
+    font-size: 0.8rem;
+    color: var(--text-gray);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .name { font-size: 3rem; }
+    .subtitle { font-size: 2rem; }
+    
+    .experience-container {
+        flex-direction: column;
+    }
+    
+    .tab-list {
+        flex-direction: row;
+        width: 100%;
+        overflow-x: auto;
+        border-left: none;
+        border-bottom: 2px solid #233554;
+    }
+
+    .tab-btn {
+        border-left: none;
+        border-bottom: 2px solid transparent;
+        white-space: nowrap;
+    }
+
+    .tab-btn.active {
+        border-left: none;
+        border-bottom: 2px solid var(--accent);
+    }
+
+    .edu-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- Certifications Section --- */
+
+.subsection-header {
+    color: var(--text-white);
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    margin-top: 30px;
+    font-weight: 600;
+}
+
+.cert-card {
+    display: flex;
+    align-items: center;
+    background-color: var(--bg-light);
+    padding: 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+    max-width: 600px; /* Keeps it from getting too wide */
+}
+
+.cert-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent);
+    background-color: rgba(17, 34, 64, 0.8);
+}
+
+.cert-icon {
+    font-size: 2rem;
+    color: var(--text-white);
+    margin-right: 20px;
+    width: 50px;
+    text-align: center;
+}
+
+/* Make the Google icon colored on hover */
+.cert-card:hover .cert-icon i {
+    color: var(--accent);
+}
+
+.cert-details h4 {
+    color: var(--text-white);
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.cert-details p {
+    color: var(--text-gray);
+    font-size: 0.9rem;
+    font-family: monospace;
+    margin: 0;
+}
+
+.cert-link-icon {
+    margin-left: auto; /* Pushes the icon to the far right */
+    color: var(--text-gray);
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+.cert-card:hover .cert-link-icon {
+    color: var(--accent);
+    transform: translate(3px, -3px);
+}
+
+/* Mobile Adjustment */
+@media (max-width: 768px) {
+    .cert-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    
+    .cert-link-icon {
+        margin-left: 0;
+    }
+    
+    .cert-icon {
+        margin-right: 0;
+        text-align: left;
+    }
+}

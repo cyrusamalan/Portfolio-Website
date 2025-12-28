@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyrus Amalan | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <nav>
+        <div class="logo">CA</div>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="resume.pdf" class="btn-resume" target="_blank">Résumé</a></li>
+        </ul>
+    </nav>
+
+    <section id="about">
+        <p class="intro">Hi, my name is</p>
+        <h1 class="name">Cyrus Amalan.</h1>
+        <h2 class="subtitle">I turn data into financial strategy.</h2>
+        <p class="description">
+            I am a Data-driven Finance Professional with 3+ years of experience in Data Engineering and Quantitative Modeling. 
+            I leverage SQL, Python, and AWS to automate financial reporting and assess the health of complex initiatives.
+        </p>
+        <div class="hero-btns">
+            <a href="mailto:cyrus.amalan@gmail.com" class="btn-outline">Get In Touch</a>
+            <div class="socials">
+                <a href="https://www.linkedin.com/in/cyrus-amalan/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/cyrusamalan/"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <h2 class="section-title"><span>01.</span> Experience</h2>
+
+        <div class="experience-container">
+            <div class="tab-list">
+                <button class="tab-btn active" data-target="#exp-1">Upwork</button>
+                <button class="tab-btn" data-target="#exp-2">Flash Bird (Dev)</button>
+                <button class="tab-btn" data-target="#exp-3">Flash Bird (Data)</button>
+            </div>
+
+            <div class="tab-content">
+                
+                <div class="job-panel active" id="exp-1">
+                    <h3>Database & Webscraper <span class="company">@ Upwork (Freelance)</span></h3>
+                    <p class="range">June 2023 – Present</p>
+                    <ul>
+                        <li>Automated ETL/ELT data pipelines in Python and SQL, reducing manual data preparation time by 60% across client projects.</li>
+                        <li>Created predictive models in R and Python that improved forecasting accuracy by 15–25% for marketing and pricing data.</li>
+                        <li>Designed Tableau and R Shiny dashboards with 20+ KPIs, improving stakeholder decision-making efficiency.</li>
+                        <li>Deployed scalable, production-grade analytics workflows and REST APIs on AWS (Lambda/RDS) for 10K+ data records per batch.</li>
+                    </ul>
+                </div>
+
+                <div class="job-panel" id="exp-2">
+                    <h3>Web Developer & Data Analyst <span class="company">@ Flash Bird</span></h3>
+                    <p class="range">Jun 2025 – Oct 2025</p>
+                    <ul>
+                        <li>Implemented RESTful API endpoints for secure data validation and encryption, contributing to a full-stack data product.</li>
+                        <li>Designed and optimized PostgreSQL relational databases managing 50K+ entries for high-availability data products.</li>
+                        <li>Built and executed SQL queries that improved data retrieval and processing speed by 30%, enhancing reporting accuracy.</li>
+                        <li>Developed interactive Tableau dashboards visualizing sales and engagement metrics, used by 5+ departments.</li>
+                    </ul>
+                </div>
+
+                <div class="job-panel" id="exp-3">
+                    <h3>Data Analyst Intern <span class="company">@ Flash Bird</span></h3>
+                    <p class="range">June 2024 – Jan 2025</p>
+                    <ul>
+                        <li>Collected, cleaned, and analyzed data in Python to identify trends and optimize outcomes.</li>
+                        <li>Developed interactive dashboards to track engagement and learning effectiveness for 100+ participants.</li>
+                        <li>Applied statistical methods (regression, classification, hypothesis testing) to evaluate curriculum effectiveness.</li>
+                        <li>Worked with the team to turn analytics into actionable recommendations for curriculum design.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2 class="section-title"><span>02.</span> Technical Projects</h2>
+        <div class="projects-grid">
+            
+            <a href="https://github.com/YOUR_USERNAME/StockVision" class="project-card" target="_blank">
+                <div class="card-header">
+                    <i class="far fa-folder"></i>
+                    <div class="card-links">
+                        <i class="fab fa-github"></i>
+                    </div>
+                </div>
+                <h3>StockVision AI</h3>
+                <p>Engineered a DQN agent to automate stock trading strategies, achieving a 15% Alpha over baseline market indices.</p>
+                <div class="tech-stack">
+                    <span>Python</span>
+                    <span>PyTorch</span>
+                    <span>DQN</span>
+                    <span>Finance</span>
+                </div>
+            </a>
+
+            <a href="https://github.com/cyrusamalan/Fitness" class="project-card" target="_blank">
+                <div class="card-header">
+                    <i class="far fa-folder"></i>
+                    <div class="card-links">
+                        <i class="fab fa-github"></i>
+                    </div>
+                </div>
+                <h3>Nutritional Tracker</h3>
+                <p>Architected a full-stack Flask web application using PostgreSQL serving 500+ users. Integrated predictive modeling for user retention.</p>
+                <div class="tech-stack">
+                    <span>Flask</span>
+                    <span>PostgreSQL</span>
+                    <span>Python</span>
+                    <span>Tableau</span>
+                </div>
+            </a>
+
+            <a href="https://github.com/cyrusamalan/spotify_data-pipeline" class="project-card" target="_blank">
+                <div class="card-header">
+                    <i class="far fa-folder"></i>
+                    <div class="card-links">
+                        <i class="fab fa-github"></i>
+                    </div>
+                </div>
+                <h3>Spotify Data Pipeline</h3>
+                <p>Processed 1M+ records using Python, SQL, and R. Built predictive models achieving 17% improvement in trend forecast accuracy.</p>
+                <div class="tech-stack">
+                    <span>SQL</span>
+                    <span>R</span>
+                    <span>Python</span>
+                    <span>ETL</span>
+                </div>
+            </a>
+
+          <a href="https://github.com/cyrusamalan/pacman" class="project-card" target="_blank">
+                <div class="card-header">
+                    <i class="far fa-folder"></i>
+                    <div class="card-links">
+                        <i class="fab fa-github"></i>
+                    </div>
+                </div>
+                <h3>Pacman AI Agents</h3>
+                <p>An interactive Pacman game environment designed to demonstrate various machine learning models and autonomous agent behaviors. Implemented intelligent agents that utilize search algorithms and reinforcement learning to optimize game strategy.</p>
+                <div class="tech-stack">
+                    <span>Python 3</span>
+                    <span>ML Models</span>
+                    <span>AI Agents</span>
+                    <span>Reinforcement Learning</span>
+                </div>
+            </a>
+        </div>
+    </section>
+
+<section id="education">
+        <h2 class="section-title"><span>03.</span> Education & Skills</h2>
+        
+        <div class="edu-container">
+            <div class="edu-item">
+                <h3>M.S. Data Science</h3>
+                <p class="school">New Jersey Institute of Technology</p>
+                <p class="year">Expected 2027</p>
+            </div>
+            <div class="edu-item">
+                <h3>B.A. Computer Science</h3>
+                <p class="school">University of California, Santa Cruz</p>
+                <p class="year">May 2025</p>
+            </div>
+        </div>
+
+        <div class="cert-wrapper">
+            <h3 class="subsection-header">Certifications</h3>
+            <a href="https://www.credly.com/badges/b94a381a-a27f-4d85-88a4-2d4ded41cdff" target="_blank" class="cert-card">
+                <div class="cert-icon">
+                    <i class="fab fa-google"></i>
+                </div>
+                <div class="cert-details">
+                    <h4>Google Data Analytics Professional Certificate</h4>
+                    <p>Issued by Google • Verified via Credly</p>
+                </div>
+                <div class="cert-link-icon">
+                    <i class="fas fa-external-link-alt"></i>
+                </div>
+            </a>
+        </div>
+        
+        <div class="skills-list">
+            <h3 class="subsection-header">Core Technologies</h3>
+            <ul>
+                <li>Python (Pandas, NumPy)</li>
+                <li>SQL & PostgreSQL</li>
+                <li>AWS (Lambda, RDS)</li>
+                <li>Tableau & R Shiny</li>
+                <li>Machine Learning (DQN, CNN)</li>
+                <li>Agile & Jira</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <p>Built by Cyrus Amalan</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
