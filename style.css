@@ -500,3 +500,78 @@ footer {
         text-align: left;
     }
 }
+
+/* --- ANIMATIONS & SCROLL EFFECTS --- */
+
+/* 1. Hero Staggered Entrance */
+/* We will apply these classes to the Hero elements in HTML */
+.fade-up-enter {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+.delay-1 { animation-delay: 0.1s; }
+.delay-2 { animation-delay: 0.2s; }
+.delay-3 { animation-delay: 0.3s; }
+.delay-4 { animation-delay: 0.4s; }
+.delay-5 { animation-delay: 0.5s; }
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 2. Scroll Animation Classes (used by JS) */
+.hidden-el {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-50px); /* Slide in from left */
+    transition: all 1s cubic-bezier(0.5, 0, 0, 1);
+}
+
+/* When the element is visible */
+.show-el {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+/* Card staggered entry adjustments */
+.project-card.hidden-el {
+    transform: translateY(50px); /* Cards slide up instead of left */
+}
+
+/* --- SCHOOL LOGO UPDATES --- */
+
+.edu-item {
+    display: flex; /* Aligns logo and text side-by-side */
+    justify-content: space-between;
+    align-items: center;
+    background: var(--bg-light);
+    padding: 20px;
+    border-radius: 4px;
+    transition: transform 0.3s ease;
+}
+
+.edu-item:hover {
+    transform: translateY(-5px);
+    border: 1px solid var(--accent);
+}
+
+.edu-text {
+    flex: 1;
+}
+
+.school-logo-img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    background-color: #fff; /* White background so logos pop */
+    border-radius: 8px;
+    padding: 5px;
+    margin-left: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
