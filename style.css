@@ -594,3 +594,59 @@ footer {
     0%, 100% { opacity: 1; }
     50% { opacity: 0; }
 }
+
+
+/* --- Mobile Navigation Styles --- */
+
+/* By default, hide the hamburger icon on desktop */
+.menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: white; /* Change this if your text is black */
+}
+
+/* Screen size 768px and smaller (Tablets & Phones) */
+@media screen and (max-width: 768px) {
+    
+    /* Show the hamburger icon */
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 20px; /* Adjust based on your logo height */
+    }
+
+    /* Hide the links by default on mobile */
+    .nav-links {
+        position: absolute;
+        right: 0px;
+        top: 60px; /* Adjust this to match your navbar height */
+        background-color: #1a1a1a; /* Match this to your navbar background color */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%; /* Or 50% if you want a side drawer */
+        transform: translateX(100%); /* Move it off-screen to the right */
+        transition: transform 0.3s ease-in-out;
+        padding: 20px 0;
+        z-index: 1000;
+    }
+
+    /* Style the list items for mobile */
+    .nav-links li {
+        margin: 15px 0;
+        opacity: 0; /* Hide text for animation */
+    }
+
+    /* When the class 'active' is added via JavaScript, slide it in */
+    .nav-links.active {
+        transform: translateX(0%);
+    }
+
+    /* Animate the text fading in */
+    .nav-links.active li {
+        opacity: 1;
+        transition: opacity 0.5s ease 0.2s;
+    }
+}
