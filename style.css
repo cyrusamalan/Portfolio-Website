@@ -606,47 +606,45 @@ footer {
     color: white; /* Change this if your text is black */
 }
 
-/* Screen size 768px and smaller (Tablets & Phones) */
+/* --- Mobile Navigation (Stacked Layout) --- */
+
+/* Only apply this on screens smaller than 768px */
 @media screen and (max-width: 768px) {
     
-    /* Show the hamburger icon */
-    .menu-toggle {
-        display: block;
-        position: absolute;
-        right: 20px;
-        top: 20px; /* Adjust based on your logo height */
-    }
-
-    /* Hide the links by default on mobile */
-    .nav-links {
-        position: absolute;
-        right: 0px;
-        top: 60px; /* Adjust this to match your navbar height */
-        background-color: #1a1a1a; /* Match this to your navbar background color */
-        display: flex;
+    nav {
+        /* Stack items vertically instead of side-by-side */
         flex-direction: column;
-        align-items: center;
-        width: 100%; /* Or 50% if you want a side drawer */
-        transform: translateX(100%); /* Move it off-screen to the right */
-        transition: transform 0.3s ease-in-out;
-        padding: 20px 0;
-        z-index: 1000;
+        padding: 15px 0; /* Add some space top/bottom */
+        height: auto; /* Allow nav to grow to fit the links */
     }
 
-    /* Style the list items for mobile */
+    .logo {
+        margin-bottom: 10px; /* Space between Logo and Links */
+    }
+
+    .nav-links {
+        /* Ensure links are visible and centered */
+        display: flex; 
+        flex-wrap: wrap; /* Allow links to wrap to the next line if needed */
+        justify-content: center;
+        width: 100%;
+        padding: 0;
+        
+        /* Reset any previous positioning */
+        position: static;
+        background-color: transparent;
+        transform: none;
+        height: auto;
+        box-shadow: none;
+    }
+
     .nav-links li {
-        margin: 15px 0;
-        opacity: 0; /* Hide text for animation */
+        /* Adjust spacing so they fit nicely */
+        margin: 5px 10px;
     }
-
-    /* When the class 'active' is added via JavaScript, slide it in */
-    .nav-links.active {
-        transform: translateX(0%);
-    }
-
-    /* Animate the text fading in */
-    .nav-links.active li {
-        opacity: 1;
-        transition: opacity 0.5s ease 0.2s;
+    
+    /* Make the links a bit smaller on mobile if needed */
+    .nav-links a {
+        font-size: 14px;
     }
 }
