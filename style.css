@@ -647,4 +647,8 @@ footer {
     .nav-links a {
         font-size: 14px;
     }
+    #about {
+        /* This adds extra space at the top so the text clears the taller menu */
+        padding-top: 250px; 
+    }
 }
