@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     if (element) {
         // The text you want to type
-        const textToType = "I am a Data-driven Finance Professional with 3+ years of experience in Data Engineering and Quantitative Modeling. I leverage SQL, Python, and AWS to automate financial reporting and assess the health of complex initiatives.";
+        const textToType = "I am a Data-driven Finance Professional with 5+ years of experience in Data Engineering and Quantitative Modeling. I leverage SQL, Python, and AWS to automate financial reporting and assess the health of complex initiatives.";
         
         let i = 0;
         const speed = 30; // Speed in milliseconds (lower is faster)
