@@ -592,7 +592,7 @@ section {
 .card-header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     margin-bottom: 22px;
 }
 
@@ -792,44 +792,82 @@ section {
     transform: translate(3px, -3px);
 }
 
-/* Skills */
-.skills-list { margin-top: 8px; }
+/* Skills Block Modern */
+.skills-block {
+    margin-top: 24px;
+}
 
-.skills-list ul {
+.skills-grid-modern {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    list-style: none;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
     margin-top: 16px;
+}
+
+.skill-category {
+    background: rgba(13, 27, 46, 0.45);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 24px;
+    border-radius: 12px;
+    border: 1px solid rgba(100, 255, 218, 0.08);
+    transition: var(--transition);
+}
+
+.skill-category:hover {
+    transform: translateY(-6px);
+    border-color: rgba(100, 255, 218, 0.28);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25), 0 0 20px rgba(100, 255, 218, 0.04);
+}
+
+.skill-category h4 {
+    color: var(--text-white);
+    font-size: 1.05rem;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
     gap: 10px;
 }
 
-.skills-list li {
+.skill-category h4 i {
+    color: var(--accent);
+    font-size: 1.2rem;
+}
+
+.skills-list-modern {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.skills-list-modern li {
     display: flex;
     align-items: center;
     gap: 10px;
     font-family: var(--font-mono);
     font-size: 0.86rem;
     color: var(--text-gray);
-    padding: 9px 14px;
+    padding: 8px 12px;
     border-radius: 6px;
-    border: 1px solid rgba(100, 255, 218, 0.06);
     background: rgba(100, 255, 218, 0.02);
+    border: 1px solid rgba(100, 255, 218, 0.05);
     transition: var(--transition);
 }
 
-.skills-list li:hover {
+.skills-list-modern li:hover {
     border-color: rgba(100, 255, 218, 0.22);
     color: var(--text-white);
-    background: rgba(100, 255, 218, 0.05);
+    background: rgba(100, 255, 218, 0.06);
     transform: translateX(4px);
 }
 
-.skills-list li::before {
+.skills-list-modern li::before {
     content: "▹";
     color: var(--accent);
     font-size: 0.9rem;
     flex-shrink: 0;
-    text-shadow: 0 0 6px rgba(100, 255, 218, 0.5);
+    text-shadow: 0 0 6px rgba(100, 255, 218, 0.3);
 }
 
 /* ============================================================
@@ -863,16 +901,17 @@ footer p:hover { color: var(--accent); cursor: default; transition: var(--transi
 .reveal {
     opacity: 0;
     transform: translateY(36px);
-    transition: opacity 0.75s cubic-bezier(0.4, 0, 0.2, 1),
-                transform 0.75s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: opacity 0.85s cubic-bezier(0.5, 0, 0, 1),
+                transform 0.85s cubic-bezier(0.5, 0, 0, 1);
 }
 
-.reveal.from-left  { transform: translateX(-40px); }
-.reveal.from-right { transform: translateX(40px); }
+.reveal.from-left  { transform: translateX(-50px); }
+.reveal.from-right { transform: translateX(50px); }
+.reveal.from-bottom { transform: translateY(50px) scale(0.98); }
 
 .reveal.visible {
     opacity: 1;
-    transform: translate(0, 0);
+    transform: translate(0, 0) scale(1.0);
 }
 
 /* ============================================================
@@ -971,7 +1010,7 @@ footer p:hover { color: var(--accent); cursor: default; transition: var(--transi
 
     .section-title::after { display: none; }
 
-    .skills-list ul { grid-template-columns: 1fr; }
+    .skills-grid-modern { grid-template-columns: 1fr; }
 
     .cert-card {
         flex-direction: column;

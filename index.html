@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cyrus Amalan | Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Fira+Code:wght@300;400;500&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Fira+Code:wght@300;400;500&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
 
     <!-- Background canvas (particles) -->
@@ -39,7 +43,7 @@
         </div>
         <p class="intro fade-up-enter delay-2">Hi, my name is</p>
         <h1 class="name fade-up-enter delay-3">Cyrus Amalan.</h1>
-        <h2 class="subtitle fade-up-enter delay-4">I turn data into financial strategy.</h2>
+        <h2 class="subtitle fade-up-enter delay-4">I build foundational AI to extend healthspan.</h2>
         <p class="description cursor fade-up-enter delay-5" id="typewriter-text"></p>
         <div class="hero-btns fade-up-enter" style="animation-delay: 0.9s; opacity: 0;">
             <a href="mailto:cyrus.amalan@gmail.com" class="btn-outline">Get In Touch</a>
@@ -52,48 +56,72 @@
 
     <!-- ===================== EXPERIENCE ===================== -->
     <section id="experience">
-        <h2 class="section-title reveal"><span>01.</span> Experience</h2>
+        <h2 class="section-title reveal from-bottom"><span>01.</span> Experience</h2>
 
-        <div class="experience-container reveal from-left">
+        <div class="experience-container reveal from-left staggered">
             <div class="tab-list">
-                <button class="tab-btn active" data-target="#exp-1">Upwork</button>
-                <button class="tab-btn" data-target="#exp-2">StockVisionz</button>
-                <button class="tab-btn" data-target="#exp-3">Flash Bird</button>
+                <button class="tab-btn active" data-target="#exp-1">Flash Bird (Applied ML)</button>
+                <button class="tab-btn" data-target="#exp-2">Upwork</button>
+                <button class="tab-btn" data-target="#exp-3">StockVisionz</button>
+                <button class="tab-btn" data-target="#exp-4">Flash Bird</button>
             </div>
 
             <div class="tab-content">
                 <div class="job-panel active" id="exp-1">
-                    <h3>Database &amp; Webscraper <span class="company">@ Upwork (Freelance)</span></h3>
-                    <p class="range">June 2023 – Present</p>
+                    <h3>Data Analyst Intern (Applied ML) <span class="company">@ Flash Bird</span></h3>
+                    <p class="range">June 2024 – Jan 2025</p>
                     <ul>
-                        <li>Automated ETL/ELT data pipelines in Python and SQL, reducing manual data preparation time by 60% across client projects.</li>
-                        <li>Created predictive models in R and Python that improved forecasting accuracy by 15–25% for marketing and pricing data.</li>
-                        <li>Designed Tableau and R Shiny dashboards with 20+ KPIs, improving stakeholder decision-making efficiency.</li>
-                        <li>Deployed scalable, production-grade analytics workflows and REST APIs on AWS (Lambda/RDS) for 10K+ data records per batch.</li>
+                        <li>Applied statistical modeling and classification methods to evaluate behavioral outcomes for
+                            100+ participants, identifying key predictors of program success.</li>
+                        <li>Optimized data cleaning pipelines in Python/R to ensure high-fidelity inputs for downstream
+                            predictive modeling.</li>
+                        <li>Collaborated with cross-functional researchers to translate complex analytical findings into
+                            actionable product recommendations.</li>
                     </ul>
                 </div>
 
                 <div class="job-panel" id="exp-2">
-                    <h3>Full-Stack Developer &amp; Machine Learning Engineer <span class="company">@ StockVisionz</span></h3>
-                    <p class="range">Jan 2025 – Present</p>
+                    <h3>Machine Learning &amp; Data Infrastructure <span class="company">@ Upwork (Freelance)</span>
+                    </h3>
+                    <p class="range">June 2023 – Present</p>
                     <ul>
-                        <li>Architected and deployed RESTful API endpoints for stock market data, ML experiments, and backtesting, powering a GPU-accelerated algorithmic trading platform with Next.js and TypeScript.</li>
-                        <li>Engineered PostgreSQL/TimescaleDB schema managing 730+ lines of DDL with hypertables, compression policies, and optimized indexes for high-performance time-series data retrieval at scale.</li>
-                        <li>Built automated data ingestion pipelines processing OHLCV data, news sentiment (FinBERT), and 15+ technical indicators, reducing data processing overhead by 40% through incremental computation.</li>
-                        <li>Developed machine learning pipeline with walk-forward validation supporting linear models, XGBoost, LSTM, and reinforcement learning agents, logging experiment metrics to PostgreSQL for model comparison.</li>
-                        <li>Designed interactive React dashboards with Recharts visualizing backtest results, ML model rankings, strategy performance, and real-time market data across multiple timeframes (1h, 4h, 1D, 1W).</li>
-                        <li>Implemented Clerk authentication and user management system with secure API routes, supporting personalized strategy configuration and experiment tracking for 100+ concurrent users.</li>
+                        <li>Architected and deployed scalable ML workflows on AWS (Lambda/RDS) for high-volume client
+                            datasets, ensuring production-grade reliability and 99.9% uptime.</li>
+                        <li>Developed predictive models that improved forecasting accuracy by up to 25%, utilizing
+                            Python-based automated feature engineering and selection.</li>
+                        <li>Automated high-throughput ETL/ELT pipelines, reducing manual data preparation for model
+                            training by 60%.</li>
                     </ul>
                 </div>
 
                 <div class="job-panel" id="exp-3">
-                    <h3>Data Analyst Intern <span class="company">@ Flash Bird</span></h3>
-                    <p class="range">June 2024 – Jan 2025</p>
+                    <h3>Full-Stack Developer &amp; Machine Learning Engineer <span class="company">@ StockVisionz</span>
+                    </h3>
+                    <p class="range">Jan 2025 – Present</p>
                     <ul>
-                        <li>Collected, cleaned, and analyzed data in Python to identify trends and optimize outcomes.</li>
-                        <li>Developed interactive dashboards to track engagement and learning effectiveness for 100+ participants.</li>
-                        <li>Applied statistical methods (regression, classification, hypothesis testing) to evaluate curriculum effectiveness.</li>
-                        <li>Worked with the team to turn analytics into actionable recommendations for curriculum design.</li>
+                        <li>Architected and deployed RESTful API endpoints for stock market data, ML experiments, and
+                            backtesting, powering an algorithmic trading platform with Next.js and TypeScript.</li>
+                        <li>Engineered a Deep Q-Network (DQN) agent to automate decision-making in high-frequency
+                            environments, achieving 15% Alpha over baseline strategies.</li>
+                        <li>Optimized agent convergence by 25% through reward shaping and hyperparameter tuning of the
+                            experience replay buffer.</li>
+                        <li>Built automated data ingestion pipelines processing OHLCV data, news sentiment (FinBERT),
+                            and 15+ technical indicators for model evaluation.</li>
+                    </ul>
+                </div>
+
+                <div class="job-panel" id="exp-4">
+                    <h3>Data Analyst Intern <span class="company">@ Flash Bird</span></h3>
+                    <p class="range">June 2025 – Oct 2025</p>
+                    <ul>
+                        <li>Applied statistical methods including linear regression, classification, and hypothesis
+                            testing to evaluate program effectiveness for 100+ participants.</li>
+                        <li>Cleaned and analyzed complex datasets in Python and R, identifying trends to optimize
+                            curriculum outcomes.</li>
+                        <li>Developed interactive dashboards and automated reports to track engagement and performance
+                            metrics.</li>
+                        <li>Collaborated with cross-functional stakeholders to translate analytical findings into
+                            actionable recommendations.</li>
                     </ul>
                 </div>
             </div>
@@ -102,54 +130,90 @@
 
     <!-- ===================== PROJECTS ===================== -->
     <section id="projects">
-        <h2 class="section-title reveal"><span>02.</span> Technical Projects</h2>
+        <h2 class="section-title reveal from-bottom"><span>02.</span> Technical Projects</h2>
         <div class="projects-grid">
 
-            <a href="https://github.com/cyrusamalan/Neural-Trade-Robinhood-" class="project-card reveal" target="_blank">
+            <a href="https://github.com/cyrusamalan/BetterResumes" class="project-card reveal from-bottom staggered"
+                target="_blank">
                 <div class="card-header">
                     <i class="far fa-folder"></i>
                     <div class="card-links"><i class="fab fa-github"></i></div>
                 </div>
-                <h3>StockVision AI</h3>
-                <p>Engineered a DQN agent to automate stock trading strategies, achieving a 15% Alpha over baseline market indices.</p>
+                <h3>BetterResumes</h3>
+                <p>Full-stack AI tool using local LLMs to tailor resumes to specific job postings without fabricating
+                    experience. Evaluates skills parsing and generates tailored rewrites.</p>
                 <div class="tech-stack">
-                    <span>Python</span><span>PyTorch</span><span>DQN</span><span>Finance</span>
+                    <span>Next.js</span><span>FastAPI</span><span>Ollama</span><span>Python</span>
                 </div>
             </a>
 
-            <a href="https://github.com/cyrusamalan/Fitness" class="project-card reveal" target="_blank">
+            <a href="https://github.com/cyrusamalan/whoop_app" class="project-card reveal from-bottom staggered"
+                target="_blank">
                 <div class="card-header">
                     <i class="far fa-folder"></i>
                     <div class="card-links"><i class="fab fa-github"></i></div>
                 </div>
-                <h3>Nutritional Tracker</h3>
-                <p>Architected a full-stack Flask web application using PostgreSQL serving 500+ users. Integrated predictive modeling for user retention.</p>
+                <h3>Whoop App Integration</h3>
+                <p>Swift-based application to interface with the Whoop API, designed to track and represent granular
+                    health and recovery data from wearables natively on iOS.</p>
                 <div class="tech-stack">
-                    <span>Flask</span><span>PostgreSQL</span><span>Python</span><span>Tableau</span>
+                    <span>Swift</span><span>iOS</span><span>HealthData</span><span>API Integration</span>
                 </div>
             </a>
 
-            <a href="https://github.com/cyrusamalan/spotify_data-pipeline" class="project-card reveal" target="_blank">
+            <a href="https://github.com/cyrusamalan/Fitness" class="project-card reveal from-bottom staggered"
+                target="_blank">
                 <div class="card-header">
                     <i class="far fa-folder"></i>
                     <div class="card-links"><i class="fab fa-github"></i></div>
                 </div>
-                <h3>Spotify Data Pipeline</h3>
-                <p>Processed 1M+ records using Python, SQL, and R. Built predictive models achieving 17% improvement in trend forecast accuracy.</p>
+                <h3>Nutritional Tracker &amp; Biomarker Dashboard</h3>
+                <p>Architected a full-stack Flask application with PostgreSQL to analyze user-reported nutritional data.
+                    Designed REST APIs linking inputs with predictive modeling, boosting retention by 12%.</p>
                 <div class="tech-stack">
-                    <span>SQL</span><span>R</span><span>Python</span><span>ETL</span>
+                    <span>Flask</span><span>PostgreSQL</span><span>Time-Series</span><span>Python</span>
                 </div>
             </a>
 
-            <a href="https://github.com/cyrusamalan/pacman" class="project-card reveal" target="_blank">
+            <a href="https://github.com/cyrusamalan/Neural-Trade-Robinhood-"
+                class="project-card reveal from-bottom staggered" target="_blank">
                 <div class="card-header">
                     <i class="far fa-folder"></i>
                     <div class="card-links"><i class="fab fa-github"></i></div>
                 </div>
-                <h3>Pacman AI Agents</h3>
-                <p>An interactive Pacman game environment demonstrating various ML models and autonomous agent behaviors with search algorithms and reinforcement learning.</p>
+                <h3>StockVision AI – RL Project</h3>
+                <p>Engineered a Deep Q-Network (DQN) agent to automate high-frequency decision-making, achieving 15%
+                    Alpha. Optimized via reward shaping and experience replay buffer tuning.</p>
                 <div class="tech-stack">
-                    <span>Python 3</span><span>ML Models</span><span>AI Agents</span><span>RL</span>
+                    <span>Python</span><span>PyTorch</span><span>DQN (RL)</span><span>Low-Latency API</span>
+                </div>
+            </a>
+
+            <a href="https://github.com/cyrusamalan/spotify_data-pipeline"
+                class="project-card reveal from-bottom staggered" target="_blank">
+                <div class="card-header">
+                    <i class="far fa-folder"></i>
+                    <div class="card-links"><i class="fab fa-github"></i></div>
+                </div>
+                <h3>Spotify Scalable Data Pipeline</h3>
+                <p>High-throughput pipeline to process 1M+ records using Python and SQL. Built predictive models
+                    achieving a 17% improvement in forecast accuracy over statistical baselines.</p>
+                <div class="tech-stack">
+                    <span>SQL</span><span>Python</span><span>Data Eng</span><span>Modeling</span>
+                </div>
+            </a>
+
+            <a href="https://github.com/cyrusamalan/pacman" class="project-card reveal from-bottom staggered"
+                target="_blank">
+                <div class="card-header">
+                    <i class="far fa-folder"></i>
+                    <div class="card-links"><i class="fab fa-github"></i></div>
+                </div>
+                <h3>Computer Vision Image Classifier</h3>
+                <p>Developed a PyTorch CNN using complex image classification protocols, boosting model performance by
+                    15% via hyperparameter tuning and deep feature map interpretability analysis.</p>
+                <div class="tech-stack">
+                    <span>CNNs</span><span>PyTorch</span><span>Deep Learning</span><span>Computer Vision</span>
                 </div>
             </a>
 
@@ -158,7 +222,7 @@
 
     <!-- ===================== EDUCATION ===================== -->
     <section id="education">
-        <h2 class="section-title reveal"><span>03.</span> Education &amp; Skills</h2>
+        <h2 class="section-title reveal from-bottom"><span>03.</span> Education &amp; Skills</h2>
 
         <div class="edu-container">
             <div class="edu-item reveal from-left">
@@ -180,28 +244,71 @@
             </div>
         </div>
 
-        <div class="cert-wrapper reveal">
+        <div class="cert-wrapper reveal from-bottom">
             <h3 class="subsection-header">Certifications</h3>
-            <a href="https://www.credly.com/badges/b94a381a-a27f-4d85-88a4-2d4ded41cdff" target="_blank" class="cert-card">
+            <a href="https://www.credly.com/badges/b94a381a-a27f-4d85-88a4-2d4ded41cdff" target="_blank"
+                class="cert-card">
                 <div class="cert-icon"><i class="fab fa-google"></i></div>
                 <div class="cert-details">
                     <h4>Google Data Analytics Professional Certificate</h4>
-                    <p>Issued by Google · Verified via Credly</p>
+                    <p>Issued by Google · Verified via Credly (2025)</p>
                 </div>
                 <div class="cert-link-icon"><i class="fas fa-external-link-alt"></i></div>
             </a>
         </div>
 
-        <div class="skills-list reveal">
-            <h3 class="subsection-header">Core Technologies</h3>
-            <ul>
-                <li>Python (Pandas, NumPy)</li>
-                <li>SQL &amp; PostgreSQL</li>
-                <li>AWS (Lambda, RDS)</li>
-                <li>Tableau &amp; R Shiny</li>
-                <li>Machine Learning (DQN, CNN)</li>
-                <li>Agile &amp; Jira</li>
-            </ul>
+        <div class="skills-block reveal from-bottom staggered">
+            <h3 class="subsection-header">Technical Competencies</h3>
+
+            <div class="skills-grid-modern">
+                <div class="skill-category">
+                    <h4><i class="fas fa-brain"></i> Deep Learning &amp; AI</h4>
+                    <ul class="skills-list-modern">
+                        <li>PyTorch</li>
+                        <li>TensorFlow</li>
+                        <li>CNNs</li>
+                        <li>Transformers</li>
+                        <li>Reinforcement Learning (DQN)</li>
+                        <li>Self-Supervised Learning</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h4><i class="fas fa-code"></i> Languages &amp; Frameworks</h4>
+                    <ul class="skills-list-modern">
+                        <li>Python (Expert)</li>
+                        <li>SQL</li>
+                        <li>R</li>
+                        <li>FastAPI</li>
+                        <li>NumPy &amp; Pandas</li>
+                        <li>Scikit-learn</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h4><i class="fas fa-cloud"></i> MLOps &amp; Cloud</h4>
+                    <ul class="skills-list-modern">
+                        <li>AWS (Lambda, RDS, S3)</li>
+                        <li>Docker</li>
+                        <li>CI/CD for ML</li>
+                        <li>Experiment Tracking</li>
+                        <li>Tableau</li>
+                        <li>Custom Dashboards</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h4><i class="fas fa-chart-line"></i> Data Science Focus</h4>
+                    <ul class="skills-list-modern">
+                        <li>Multimodal Data Integration</li>
+                        <li>Predictive Modeling</li>
+                        <li>Hypothesis Testing</li>
+                        <li>Signal Processing</li>
+                        <li>Time-Series Analysis</li>
+                        <li>Feature Engineering</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -211,4 +318,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>

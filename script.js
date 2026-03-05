@@ -153,12 +153,15 @@ document.addEventListener('DOMContentLoaded', () => {
             const el     = entry.target;
             const parent = el.parentElement;
             const isGrid = parent.classList.contains('projects-grid') ||
-                           parent.classList.contains('edu-container');
+                           parent.classList.contains('edu-container') ||
+                           parent.classList.contains('skills-grid-modern') ||
+                           el.classList.contains('staggered');
 
             if (isGrid) {
                 const siblings = [...parent.querySelectorAll('.reveal')];
                 const idx = siblings.indexOf(el);
-                setTimeout(() => el.classList.add('visible'), idx * 110);
+                // Apply a slight delay based on index for staggered grids
+                setTimeout(() => el.classList.add('visible'), idx * 130);
             } else {
                 el.classList.add('visible');
             }
@@ -205,7 +208,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // ============================================================
     const typedEl = document.getElementById('typewriter-text');
     if (typedEl) {
-        const text = "I am a Data-driven Finance Professional with 5+ years of experience in Data Engineering and Quantitative Modeling. I leverage SQL, Python, and AWS to automate financial reporting and assess the health of complex initiatives.";
+        const text = "Machine Learning Engineer and M.S. Data Science candidate specializing in Deep Learning and Multimodal AI. Proven expertise in building sophisticated neural architectures, including CNNs and Reinforcement Learning (DQN) agents.";
         let i = 0;
 
         function typeWriter() {
